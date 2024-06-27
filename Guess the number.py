@@ -4,6 +4,7 @@ import termcolor
 import pyfiglet
 import os
 
+# Display the game title
 print(termcolor.colored(pyfiglet.figlet_format("Guess the number"), color='light_green'))
 
 def play_game(level):
@@ -42,7 +43,7 @@ def play_game(level):
 		print(termcolor.colored(pyfiglet.figlet_format("Loser"), color='red'))
 		print(termcolor.colored(f"Sorry, you're out of attempts. The secret number was {secret_number}.", color='red'))
 
-
+# Get user input for the level
 try:
 	level_choice = int(input("Choose a level 1, 2 or 3: "))
 	play_game(level_choice)
